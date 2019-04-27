@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 27 Apr 2019 pada 07.36
+-- Generation Time: 27 Apr 2019 pada 08.10
 -- Versi Server: 10.1.9-MariaDB
 -- PHP Version: 7.0.0
 
@@ -23,17 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `akunadmin`
---
-
-CREATE TABLE `akunadmin` (
-  `Username` varchar(20) NOT NULL,
-  `Password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `akunalumni`
 --
 
@@ -49,8 +38,8 @@ CREATE TABLE `akunalumni` (
 --
 
 CREATE TABLE `dataalumni` (
-  `NIM` varchar(10) NOT NULL,
   `Nama` varchar(50) NOT NULL,
+  `NIM` varchar(10) NOT NULL,
   `Tahun_Lulus` char(4) NOT NULL,
   `Tempat_KP` varchar(50) NOT NULL,
   `IPK` double NOT NULL,
@@ -62,12 +51,6 @@ CREATE TABLE `dataalumni` (
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `akunadmin`
---
-ALTER TABLE `akunadmin`
-  ADD PRIMARY KEY (`Username`);
 
 --
 -- Indexes for table `akunalumni`
