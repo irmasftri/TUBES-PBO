@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 27 Apr 2019 pada 08.10
+-- Generation Time: 27 Apr 2019 pada 08.26
 -- Versi Server: 10.1.9-MariaDB
 -- PHP Version: 7.0.0
 
@@ -17,35 +17,46 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `alumni`
+-- Database: `smiati`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `akunalumni`
+-- Struktur dari tabel `adminakun`
 --
 
-CREATE TABLE `akunalumni` (
+CREATE TABLE `adminakun` (
   `Username` varchar(20) NOT NULL,
-  `Password` varchar(30) NOT NULL
+  `Password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dataalumni`
+-- Struktur dari tabel `alumni`
 --
 
-CREATE TABLE `dataalumni` (
-  `Nama` varchar(50) NOT NULL,
+CREATE TABLE `alumni` (
   `NIM` varchar(10) NOT NULL,
-  `Tahun_Lulus` char(4) NOT NULL,
-  `Tempat_KP` varchar(50) NOT NULL,
+  `NAMA` varchar(25) NOT NULL,
+  `Tahun_Lulu` char(4) NOT NULL,
+  `Tempat_KP` varchar(30) NOT NULL,
   `IPK` double NOT NULL,
-  `Riwayat_Pekerjaan` varchar(50) NOT NULL,
-  `Judul_TA` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL
+  `Riwayat_Kerja` varchar(30) NOT NULL,
+  `Judul_TA` varchar(30) NOT NULL,
+  `email` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `alumniakun`
+--
+
+CREATE TABLE `alumniakun` (
+  `Username` varchar(20) NOT NULL,
+  `Password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -53,16 +64,22 @@ CREATE TABLE `dataalumni` (
 --
 
 --
--- Indexes for table `akunalumni`
+-- Indexes for table `adminakun`
 --
-ALTER TABLE `akunalumni`
+ALTER TABLE `adminakun`
   ADD PRIMARY KEY (`Username`);
 
 --
--- Indexes for table `dataalumni`
+-- Indexes for table `alumni`
 --
-ALTER TABLE `dataalumni`
+ALTER TABLE `alumni`
   ADD PRIMARY KEY (`NIM`);
+
+--
+-- Indexes for table `alumniakun`
+--
+ALTER TABLE `alumniakun`
+  ADD PRIMARY KEY (`Username`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
