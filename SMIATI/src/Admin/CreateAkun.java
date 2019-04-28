@@ -33,13 +33,13 @@ public final class CreateAkun extends javax.swing.JFrame {
         
         try {
             Statement stat = (Statement) koneksi.getKoneksi().createStatement();
-            String sql = "Select * from akun_alumni";
+            String sql = "Select * from akunalumni";
             ResultSet res = stat.executeQuery(sql);
             
             while(res.next()){
             Object[] obj = new Object[2];
-            obj[0] = res.getString("username");
-            obj[1] = res.getString("password");
+            obj[0] = res.getString("NIM");
+            obj[1] = res.getString("Password");
             
             model.addRow(obj);
             }
@@ -69,7 +69,7 @@ public final class CreateAkun extends javax.swing.JFrame {
         loadData();
         try{
             Statement stat = (Statement) koneksi.getKoneksi().createStatement();
-            String sql = "insert into akun_alumni(username,password) values ('" +vUname+"','"+vPass+"')";
+            String sql = "insert into akunalumni(NIM,Password) values ('" +vUname+"','"+vPass+"')";
             
             PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
             p.executeUpdate();
@@ -100,8 +100,8 @@ public final class CreateAkun extends javax.swing.JFrame {
         loadData();
         try{
             Statement stat = (Statement) koneksi.getKoneksi().createStatement();
-            String sql = "UPDATE akun_alumni SET username = '"+vUname +"','"
-                    +"password = '"+ vPass +"' WHERE username = '" + vPass +"'";
+            String sql = "UPDATE akunalumni SET NIM = '"+vUname +"','"
+                    +"Password = '"+ vPass +"' WHERE NIM = '" + vPass +"'";
             PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
             p.executeUpdate();
             getData();
