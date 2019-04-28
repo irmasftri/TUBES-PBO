@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//Ctrate akum
 package Admin;
 
 import SMIATI.koneksi;
@@ -100,6 +101,7 @@ public final class CreateAkun extends javax.swing.JFrame {
         loadData();
         try{
             Statement stat = (Statement) koneksi.getKoneksi().createStatement();
+            
             String sql = "UPDATE akunalumni SET NIM = '"+vUname+"',"
                     +"Password = '"+ vPass +"' WHERE NIM = '" + vUname +"'";
             PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
