@@ -16,6 +16,7 @@ public class pilihan extends javax.swing.JFrame {
      */
     public pilihan() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -32,6 +33,7 @@ public class pilihan extends javax.swing.JFrame {
         cancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jButton1.setText("Lihat Data");
