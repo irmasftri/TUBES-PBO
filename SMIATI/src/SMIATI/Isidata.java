@@ -156,7 +156,7 @@ public class Isidata extends javax.swing.JFrame {
                 p.executeUpdate();
                 getData();
                 Reset();
-                JOptionPane.showMessageDialog(null, "Berhasil . . .");
+                JOptionPane.showMessageDialog(null, "Delete Berhasil . . .");
             }catch(SQLException err){
                 JOptionPane.showMessageDialog(null, err.getMessage());
             }
