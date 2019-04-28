@@ -1,5 +1,8 @@
 package SMIATI;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /*
@@ -143,7 +146,31 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        if (vusername.getText().equals("admin")) {
+       koneksi.getKoneksi();
+       
+       try{
+            Statement stat = (Statement)koneksi.getKoneksi().createStatement();
+            String sql = "SELECT * FROM akunalumni WHERE NIM = '" + vusername.getText()
+                    +"' AND Password = '"+vpassword.getText()+"'";
+            ResultSet res = stat.executeQuery(sql);
+            res.next();
+            res.last();
+            
+            if (res.getRow()==1){
+                dispose();
+                Isidata alm = new Isidata();
+                alm.setVisible(true);
+            } else{
+                JOptionPane.showMessageDialog(null, "Maaf Username/Password Anda salah");
+                vusername.setText("");
+                vpassword.setText("");
+            }
+        } catch (SQLException err) {
+            JOptionPane.showMessageDialog(null, err.getMessage());
+        } 
+       
+       
+        /*if (vusername.getText().equals("admin")) {
         if (vpassword.getText().equals("admin")) {
         // Bila Login Sukses Maka Masuk Menu Utama
         new menunya().show();
@@ -158,7 +185,7 @@ public class Login extends javax.swing.JFrame {
         vusername.setText("");
         vpassword.setText("");
         vusername.requestFocus();
-}
+}*/
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
