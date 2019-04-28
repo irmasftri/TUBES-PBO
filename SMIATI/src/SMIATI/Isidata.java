@@ -40,7 +40,7 @@ public class Isidata extends javax.swing.JFrame {
         
         try{
             Statement stat = (Statement) koneksi.getKoneksi().createStatement();
-            String sql = "SELECT * FROM smiati";
+            String sql = "SELECT * FROM alumni";
             ResultSet res = stat.executeQuery(sql);
             
             while(res.next()){
