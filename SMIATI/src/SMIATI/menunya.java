@@ -9,6 +9,7 @@ public class menunya extends javax.swing.JFrame {
 
     public menunya() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
