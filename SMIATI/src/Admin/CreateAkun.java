@@ -88,7 +88,7 @@ public final class CreateAkun extends javax.swing.JFrame {
     
     public void dataSelect(){
         int i = table.getSelectedRow();
-        if(i == 0){
+        if(i == -1){
             return;
         }
         
@@ -100,8 +100,8 @@ public final class CreateAkun extends javax.swing.JFrame {
         loadData();
         try{
             Statement stat = (Statement) koneksi.getKoneksi().createStatement();
-            String sql = "UPDATE akunalumni SET NIM = '"+vUname +"','"
-                    +"Password = '"+ vPass +"' WHERE NIM = '" + vPass +"'";
+            String sql = "UPDATE akunalumni SET NIM = '"+vUname+"',"
+                    +"Password = '"+ vPass +"' WHERE NIM = '" + vUname +"'";
             PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
             p.executeUpdate();
             getData();
