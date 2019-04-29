@@ -1,5 +1,6 @@
-package SMIATI;
+package Admin;
 
+import SMIATI.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -15,12 +16,12 @@ import javax.swing.JOptionPane;
  *
  * @author karjono
  */
-public class login extends javax.swing.JFrame {
+public class LoginAdm extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public login() {
+    public LoginAdm() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -150,7 +151,7 @@ public class login extends javax.swing.JFrame {
        
        try{
             Statement stat = (Statement)koneksi.getKoneksi().createStatement();
-            String sql = "SELECT * FROM akunalumni WHERE NIM = '" + vusername.getText()
+            String sql = "SELECT * FROM adminakun WHERE Username = '" + vusername.getText()
                     +"' AND Password = '"+vpassword.getText()+"'";
             ResultSet res = stat.executeQuery(sql);
             res.next();
@@ -158,8 +159,8 @@ public class login extends javax.swing.JFrame {
             
             if (res.getRow()==1){
                 dispose();
-                Isidata alm = new Isidata();
-                alm.setVisible(true);
+                Admin adm = new Admin();
+                adm.setVisible(true);
             } else{
                 JOptionPane.showMessageDialog(null, "Maaf Username/Password Anda salah");
                 vusername.setText("");
@@ -172,11 +173,11 @@ public class login extends javax.swing.JFrame {
        
         /*if (vusername.getText().equals("admin")) {
         if (vpassword.getText().equals("admin")) {
-        // Bila login Sukses Maka Masuk Menu Utama
+        // Bila LoginAdm Sukses Maka Masuk Menu Utama
         new menunya().show();
         this.dispose(); }
         else {
-        // Bila login Gagal Maka Ulangi login
+        // Bila LoginAdm Gagal Maka Ulangi LoginAdm
         JOptionPane.showMessageDialog(rootPane, "<error> Password Salah, Silahkan Coba Lagi");
         vpassword.setText("");
         vpassword.requestFocus(); }}
@@ -217,51 +218,19 @@ public class login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginAdm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new LoginAdm().setVisible(true);
             }
         });
     }
