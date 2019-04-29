@@ -113,6 +113,26 @@ public final class CreateAkun extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, er.getMessage());
         }
     }
+    
+    public void delData(){
+        loadData();
+        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus"+vUname+"?","Konfirmasi",
+                    JOptionPane.OK_CANCEL_OPTION);
+        
+        if(pesan==JOptionPane.OK_OPTION){
+            try{
+                Statement stat = (Statement) koneksi.getKoneksi().createStatement();
+                String sql = "DELETE FROM akunalumni WHERE NIM = '"+vUname+"'";
+                PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
+                p.executeUpdate();
+                getData();
+                reset();
+                JOptionPane.showMessageDialog(null, "Delete berhasil");
+            } catch(SQLException er){
+                JOptionPane.showMessageDialog(null, er.getMessage());
+            }
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -171,6 +191,11 @@ public final class CreateAkun extends javax.swing.JFrame {
         });
 
         btnDel.setText("Delete");
+        btnDel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDelActionPerformed(evt);
+            }
+        });
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -290,6 +315,10 @@ public final class CreateAkun extends javax.swing.JFrame {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         updateData();
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
+        delData();
+    }//GEN-LAST:event_btnDelActionPerformed
 
     /**
      * @param args the command line arguments
