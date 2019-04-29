@@ -35,6 +35,11 @@ public class Admin extends javax.swing.JFrame {
 
         btnLoker.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         btnLoker.setText("Tambah Lowongan Pekerjaan");
+        btnLoker.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLokerActionPerformed(evt);
+            }
+        });
 
         btnBuatAkun.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         btnBuatAkun.setText("Buat Akun");
@@ -69,8 +74,14 @@ public class Admin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuatAkunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuatAkunActionPerformed
+        dispose();
         new CreateAkun().show();
     }//GEN-LAST:event_btnBuatAkunActionPerformed
+
+    private void btnLokerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLokerActionPerformed
+        dispose();
+        new createLoker().show();
+    }//GEN-LAST:event_btnLokerActionPerformed
 
     /**
      * @param args the command line arguments
