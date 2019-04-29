@@ -5,19 +5,145 @@
  */
 package Admin;
 
+import SMIATI.koneksi;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author idhammidori
  */
 public class createLoker extends javax.swing.JFrame {
 
+    private DefaultTableModel model;
+    String vNama,vJabat,vEmail,vAlmt;
     /**
      * Creates new form createLoker
      */
+    public void getData(){
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
+        
+        try {
+            Statement stat = (Statement) koneksi.getKoneksi().createStatement();
+            String sql = "Select * from lowongan_kerja";
+            ResultSet res = stat.executeQuery(sql);
+            
+            while(res.next()){
+            Object[] obj = new Object[4];
+            obj[0] = res.getString("nama_perusahaan");
+            obj[1] = res.getString("jabatan");
+            obj[2] = res.getString("email");
+            obj[3] = res.getString("alamat");
+            
+            model.addRow(obj);
+            }
+        } catch (SQLException err){
+            JOptionPane.showMessageDialog(null, err.getMessage());
+        }
+    }
+    
     public createLoker() {
         initComponents();
+        setLocationRelativeTo(null);
+        
+        model = new DefaultTableModel();
+        tabel.setModel(model);
+        model.addColumn("Nama Perusahaan");
+        model.addColumn("Jabatan");
+        model.addColumn("Kontak");
+        model.addColumn("Alamat");
+        
+        getData();
     }
 
+    public void loadData(){
+        vNama = nama.getText();
+        vJabat = jabatan.getText();
+        vEmail = email.getText(); 
+        vAlmt = alamat.getText(); 
+    }
+    
+    public void saveData(){
+        loadData();
+        try{
+            Statement stat = (Statement) koneksi.getKoneksi().createStatement();
+            String sql = "insert into lowongan_kerja(nama_perusahaan,jabatan,email,alamat) values ('"
+                         +vNama+"','"+vJabat+"','"+vEmail+"','"+vAlmt+"')";
+            
+            PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
+            p.executeUpdate();
+            getData();
+        } catch(SQLException err){
+            JOptionPane.showMessageDialog(null, err.getMessage());
+        }
+    }
+    
+    public void reset(){
+        vNama = "";
+        vJabat = "";
+        vEmail = "";
+        vAlmt = "";
+        nama.setText(vNama);
+        jabatan.setText(vJabat);
+        email.setText(vEmail);
+        alamat.setText(vAlmt);
+    }
+    
+    public void dataSelect(){
+        int i = tabel.getSelectedRow();
+        if(i == -1){
+            return;
+        }
+        
+        nama.setText(""+model.getValueAt(i,0));
+        jabatan.setText(""+model.getValueAt(i,1));
+        email.setText(""+model.getValueAt(i,2));
+        alamat.setText(""+model.getValueAt(i,3));
+    }
+    
+    public void updateData(){
+        loadData();
+        try{
+            Statement stat = (Statement) koneksi.getKoneksi().createStatement();
+            
+            String sql = "UPDATE lowongan_kerja SET nama_perusahaan = '"+vNama+"',"+"jabatan = '"+vJabat+"',"
+                    +"email = '"+vEmail+"',"+"alamat = '"+vAlmt+"' WHERE email = '"+vEmail+"'";
+            //String sql = "UPDATE akunalumni SET NIM = '"+vUname+"',"
+              //      +"Password = '"+ vPass +"' WHERE NIM = '" + vUname +"'";
+            PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
+            p.executeUpdate();
+            getData();
+            reset();
+            JOptionPane.showMessageDialog(null, "Update berhasil");
+        } catch(SQLException er){
+            JOptionPane.showMessageDialog(null, er.getMessage());
+        }
+    }
+    
+    public void delData(){
+        loadData();
+        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus"+vEmail+"?","Konfirmasi",
+                    JOptionPane.OK_CANCEL_OPTION);
+        
+        if(pesan==JOptionPane.OK_OPTION){
+            try{
+                Statement stat = (Statement) koneksi.getKoneksi().createStatement();
+                String sql = "DELETE FROM lowongan_kerja WHERE email = '"+vEmail+"'";
+                PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
+                p.executeUpdate();
+                getData();
+                reset();
+                JOptionPane.showMessageDialog(null, "Delete berhasil");
+            } catch(SQLException er){
+                JOptionPane.showMessageDialog(null, er.getMessage());
+            }
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,7 +187,7 @@ public class createLoker extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel1.setText("Tambah Lowongan Pekerjaan");
 
         jLabelNama.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -77,12 +203,32 @@ public class createLoker extends javax.swing.JFrame {
         jLabelAdrs.setText("Alamat Perusahaan");
 
         save.setText("Save");
+        save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveActionPerformed(evt);
+            }
+        });
 
         btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -102,16 +248,17 @@ public class createLoker extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tabel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -142,13 +289,17 @@ public class createLoker extends javax.swing.JFrame {
                                     .addComponent(jabatan)
                                     .addComponent(nama))))))
                 .addGap(40, 40, 40))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelNama)
                     .addComponent(nama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -172,7 +323,7 @@ public class createLoker extends javax.swing.JFrame {
                     .addComponent(btnReset))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addGap(19, 19, 19))
         );
@@ -184,6 +335,26 @@ public class createLoker extends javax.swing.JFrame {
         dispose();
         new Admin().show();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
+       saveData();
+    }//GEN-LAST:event_saveActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        reset();
+    }//GEN-LAST:event_btnResetActionPerformed
+
+    private void tabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelMouseClicked
+        dataSelect();
+    }//GEN-LAST:event_tabelMouseClicked
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        updateData();
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        delData();
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     /**
      * @param args the command line arguments
