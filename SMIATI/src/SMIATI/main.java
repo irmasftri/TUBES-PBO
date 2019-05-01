@@ -10,6 +10,7 @@ public class main {
     public static void main(String[] args) {
         view lihat = new view();
         
-        lihat.data();
+      
+        System.out.println(lihat.data.get(1).email);
     }
 }

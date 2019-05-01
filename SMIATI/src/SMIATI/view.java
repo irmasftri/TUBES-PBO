@@ -1,19 +1,31 @@
 
 package SMIATI;
 import java.sql.*;
+import java.util.*;
 
 public class view {
-    public void data (){
+    Map<Integer,Alumni>  data = new HashMap<Integer,Alumni>();
+    int sum;
+    public view (){
+        
      try(
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/smiati", "root", "");
             Statement stmt = conn.createStatement();
-            ){
-                //String strSelect = "select * from test";
-               // System.out.println("Data alumni Teknik Informatika: "+ strSelect +"\n");
-                
+            ){  
                 ResultSet rset = stmt.executeQuery("select * from alumni");
-                
-                System.out.println("The records selected are:");
+                int i=1;
+                while (rset.next()){
+                    Alumni alm = new Alumni(rset.getString("NIM"), rset.getString("NAMA"),rset.getString("Tahun_Lulus"), rset.getString("Tempat_KP"), rset.getDouble("IPK"), rset.getString("Riwayat_Kerja"), rset.getString("Judul_TA"), rset.getString("email"));
+                    data.put(i, alm);
+                    i++;
+                } 
+                sum =i;
+              /* for (int j=1;j<i;j++){
+                   if (data.get(j).ipk<4){
+                   System.out.println(data.get(j).nama+" "+data.get(j).ipk);
+                   }
+               }*/
+               /* System.out.println("The records selected are:");
                 int rowCount=0;
                 while(rset.next()){
                     String NIM = rset.getString("NIM");
@@ -26,10 +38,14 @@ public class view {
                     double ipk = rset.getDouble("IPK");
                     System.out.println(NIM+" "+nama+", "+thnlulus+ " "+kp+" "+ rk + " "+ ta+" "+email+" "+ipk);
                     ++rowCount;
-                }
-                System.out.println("Banyak Data = "+ rowCount);
+                }*/
+               // System.out.println("Banyak Data = "+ rowCount);
             }catch (SQLException ex){
                 ex.printStackTrace();
             }
-    }
+        }    
+     public int getBanyakdata(){
+         return sum;
+     }
+     
 }

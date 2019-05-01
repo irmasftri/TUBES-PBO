@@ -104,7 +104,7 @@ public class Isidata extends javax.swing.JFrame {
         
     }
     
-    public void dataSelect(){
+   public void dataSelect(){
         int i = tabel.getSelectedRow();
         if (i == -1){
             return;
