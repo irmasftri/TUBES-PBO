@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package Admin;
-
+import home.*;
 /**
  *
  * @author idhammidori
  */
 public class Admin extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Admin
      */
@@ -30,6 +30,7 @@ public class Admin extends javax.swing.JFrame {
 
         btnLoker = new javax.swing.JButton();
         btnBuatAkun = new javax.swing.JButton();
+        KEMBALI = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +50,13 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
+        KEMBALI.setText("KEMBALI");
+        KEMBALI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KEMBALIActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -59,6 +67,10 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(btnBuatAkun, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnLoker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(77, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(KEMBALI)
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,7 +79,9 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(btnBuatAkun, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLoker, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(KEMBALI)
+                .addContainerGap())
         );
 
         pack();
@@ -82,6 +96,11 @@ public class Admin extends javax.swing.JFrame {
         dispose();
         new createLoker().show();
     }//GEN-LAST:event_btnLokerActionPerformed
+
+    private void KEMBALIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KEMBALIActionPerformed
+        dispose ();
+        new Dashboard().show();
+    }//GEN-LAST:event_KEMBALIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,6 +138,7 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton KEMBALI;
     private javax.swing.JButton btnBuatAkun;
     private javax.swing.JButton btnLoker;
     // End of variables declaration//GEN-END:variables
