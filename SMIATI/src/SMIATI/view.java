@@ -13,13 +13,13 @@ public class view {
             Statement stmt = conn.createStatement();
             ){  
                 ResultSet rset = stmt.executeQuery("select * from alumni");
-                int i=1;
+                int i=0;
                 while (rset.next()){
                     Alumni alm = new Alumni(rset.getString("NIM"), rset.getString("NAMA"),rset.getString("Tahun_Lulus"), rset.getString("Tempat_KP"), rset.getDouble("IPK"), rset.getString("Riwayat_Kerja"), rset.getString("Judul_TA"), rset.getString("email"));
                     data.put(i, alm);
                     i++;
                 } 
-                sum =i;
+
               /* for (int j=1;j<i;j++){
                    if (data.get(j).ipk<4){
                    System.out.println(data.get(j).nama+" "+data.get(j).ipk);
@@ -44,8 +44,5 @@ public class view {
                 ex.printStackTrace();
             }
         }    
-     public int getBanyakdata(){
-         return sum;
-     }
-     
+
 }

@@ -29,7 +29,7 @@ public class dataSeluruhAlumni extends javax.swing.JFrame {
         view alm = new view();
         Object obj[] = new Object[8];
         
-            for(int i =1;i<alm.sum;i++){
+            for(int i =0;i<alm.data.size();i++){
                 obj[0]=alm.data.get(i).nama;
                 obj[1]=alm.data.get(i).nim;
                 obj[2]=alm.data.get(i).thn;
