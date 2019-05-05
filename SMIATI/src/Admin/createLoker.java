@@ -194,30 +194,31 @@ public class createLoker extends javax.swing.JFrame {
         jLabel1.setText("Tambah Lowongan Pekerjaan");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
-        jLabelNama.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabelNama.setForeground(new java.awt.Color(12, 12, 79));
+        jLabelNama.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelNama.setForeground(new java.awt.Color(0, 0, 51));
         jLabelNama.setText("Nama Perusahaan");
-        getContentPane().add(jLabelNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 117, 20));
+        getContentPane().add(jLabelNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 117, 30));
 
-        jLabelJabatan.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabelJabatan.setForeground(new java.awt.Color(12, 12, 79));
+        jLabelJabatan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelJabatan.setForeground(new java.awt.Color(0, 0, 51));
         jLabelJabatan.setText("Lowongan Jabatan");
-        getContentPane().add(jLabelJabatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 117, -1));
+        getContentPane().add(jLabelJabatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 126, 117, 20));
 
-        jLabelEmail.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabelEmail.setForeground(new java.awt.Color(12, 12, 79));
+        jLabelEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelEmail.setForeground(new java.awt.Color(0, 0, 51));
         jLabelEmail.setText("Email Perusahaan");
-        getContentPane().add(jLabelEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 117, 20));
+        getContentPane().add(jLabelEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 117, 30));
 
-        jLabelAdrs.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabelAdrs.setForeground(new java.awt.Color(12, 12, 79));
+        jLabelAdrs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelAdrs.setForeground(new java.awt.Color(0, 0, 51));
         jLabelAdrs.setText("Alamat Perusahaan");
-        getContentPane().add(jLabelAdrs, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 117, 20));
-        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 448, -1));
-        getContentPane().add(jabatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 448, -1));
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 448, -1));
-        getContentPane().add(alamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 448, 20));
+        getContentPane().add(jLabelAdrs, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 117, 20));
+        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 448, 30));
+        getContentPane().add(jabatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 448, 30));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 448, 30));
+        getContentPane().add(alamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 448, 30));
 
+        save.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         save.setForeground(new java.awt.Color(0, 0, 102));
         save.setText("Save");
         save.addActionListener(new java.awt.event.ActionListener() {
@@ -225,8 +226,9 @@ public class createLoker extends javax.swing.JFrame {
                 saveActionPerformed(evt);
             }
         });
-        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 98, -1));
+        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 98, -1));
 
+        btnReset.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnReset.setForeground(new java.awt.Color(0, 0, 102));
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
@@ -234,8 +236,9 @@ public class createLoker extends javax.swing.JFrame {
                 btnResetActionPerformed(evt);
             }
         });
-        getContentPane().add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 101, -1));
+        getContentPane().add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 101, -1));
 
+        btnDelete.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnDelete.setForeground(new java.awt.Color(0, 0, 102));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -243,8 +246,9 @@ public class createLoker extends javax.swing.JFrame {
                 btnDeleteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 97, -1));
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 97, -1));
 
+        btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(0, 0, 102));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -252,8 +256,9 @@ public class createLoker extends javax.swing.JFrame {
                 btnUpdateActionPerformed(evt);
             }
         });
-        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 98, -1));
+        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 98, -1));
 
+        btnBack.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnBack.setForeground(new java.awt.Color(0, 0, 102));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -261,7 +266,7 @@ public class createLoker extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 81, -1));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 500, 81, -1));
 
         tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -281,10 +286,10 @@ public class createLoker extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tabel);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 264, 675, 210));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 675, 190));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/82794.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 550));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -10, 800, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
