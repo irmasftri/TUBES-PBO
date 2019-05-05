@@ -102,7 +102,7 @@ public class LoginAdm extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 51, 102));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Login");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 140, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 140, -1));
 
         KEMBALI.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         KEMBALI.setForeground(new java.awt.Color(0, 0, 102));
