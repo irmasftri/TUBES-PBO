@@ -33,6 +33,7 @@ public class Admin extends javax.swing.JFrame {
         KEMBALI = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 153, 153));
 
         btnLoker.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnLoker.setText("Tambah Lowongan Pekerjaan");
