@@ -76,8 +76,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 34)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel1.setText("Sistem Informasi");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 260, 50));
+        jLabel1.setText("Sistem Manajemen Informasi");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 450, 50));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 34)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 102));

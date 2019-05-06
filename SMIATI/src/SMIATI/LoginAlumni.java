@@ -65,14 +65,17 @@ public class LoginAlumni extends javax.swing.JFrame {
         getContentPane().add(vpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 126, 212, 29));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setText("Username");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(419, 95, 85, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
         jLabel2.setText("Password");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(419, 130, 80, -1));
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(0, 0, 102));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +85,7 @@ public class LoginAlumni extends javax.swing.JFrame {
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 166, 103, -1));
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(0, 0, 102));
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +95,7 @@ public class LoginAlumni extends javax.swing.JFrame {
         getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(623, 166, 103, -1));
 
         kembali.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        kembali.setForeground(new java.awt.Color(0, 0, 102));
         kembali.setText("Kembali");
         kembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +108,7 @@ public class LoginAlumni extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 51, 102));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Login");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 140, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 140, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/itera_view_BvsL5x-nniu_1.jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 540));
@@ -124,7 +129,7 @@ public class LoginAlumni extends javax.swing.JFrame {
             
             if (res.getRow()==1){
                 dispose();
-                Isidata alm = new Isidata();
+                menunya alm = new menunya();
                 alm.setVisible(true);
             } else{
                 JOptionPane.showMessageDialog(null, "Maaf Username/Password Anda salah");
