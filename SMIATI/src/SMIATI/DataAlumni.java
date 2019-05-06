@@ -31,7 +31,6 @@ public class DataAlumni extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         kembali = new javax.swing.JButton();
-        textSrch = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,9 +44,9 @@ public class DataAlumni extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 159, 308, 47));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 310, 70));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 51, 102));
         jButton2.setText("Cari Data");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +54,7 @@ public class DataAlumni extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 104, 30));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 310, 70));
 
         kembali.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         kembali.setForeground(new java.awt.Color(0, 51, 102));
@@ -65,11 +64,10 @@ public class DataAlumni extends javax.swing.JFrame {
                 kembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 101, 31));
-        getContentPane().add(textSrch, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 224, 308, 29));
+        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 480, 101, 31));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/82794.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 480));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -85,7 +83,8 @@ public class DataAlumni extends javax.swing.JFrame {
     }//GEN-LAST:event_kembaliActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+        new Cari().show();
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -128,6 +127,5 @@ public class DataAlumni extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton kembali;
-    private javax.swing.JTextField textSrch;
     // End of variables declaration//GEN-END:variables
 }
