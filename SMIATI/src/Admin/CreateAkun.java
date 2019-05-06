@@ -116,7 +116,7 @@ public final class CreateAkun extends javax.swing.JFrame {
     
     public void delData(){
         loadData();
-        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus"+vUname+"?","Konfirmasi",
+        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus "+vUname+"?","Konfirmasi",
                     JOptionPane.OK_CANCEL_OPTION);
         
         if(pesan==JOptionPane.OK_OPTION){

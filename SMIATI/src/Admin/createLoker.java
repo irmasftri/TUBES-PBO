@@ -113,8 +113,6 @@ public class createLoker extends javax.swing.JFrame {
             
             String sql = "UPDATE lowongan_kerja SET nama_perusahaan = '"+vNama+"',"+"jabatan = '"+vJabat+"',"
                     +"email = '"+vEmail+"',"+"alamat = '"+vAlmt+"' WHERE email = '"+vEmail+"'";
-            //String sql = "UPDATE akunalumni SET NIM = '"+vUname+"',"
-              //      +"Password = '"+ vPass +"' WHERE NIM = '" + vUname +"'";
             PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
             p.executeUpdate();
             getData();
@@ -127,7 +125,7 @@ public class createLoker extends javax.swing.JFrame {
     
     public void delData(){
         loadData();
-        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus"+vEmail+"?","Konfirmasi",
+        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus "+vEmail+"?","Konfirmasi",
                     JOptionPane.OK_CANCEL_OPTION);
         
         if(pesan==JOptionPane.OK_OPTION){

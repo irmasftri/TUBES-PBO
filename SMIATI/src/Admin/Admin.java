@@ -56,7 +56,7 @@ public class Admin extends javax.swing.JFrame {
 
         KEMBALI.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         KEMBALI.setForeground(new java.awt.Color(0, 51, 102));
-        KEMBALI.setText("Kembali");
+        KEMBALI.setText("Logout");
         KEMBALI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 KEMBALIActionPerformed(evt);

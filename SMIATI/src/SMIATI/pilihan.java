@@ -10,7 +10,7 @@ package SMIATI;
  * @author Acer id
  */
 public class pilihan extends javax.swing.JFrame {
-    dataSeluruhAlumni alm = new dataSeluruhAlumni();
+    dataSeluruhAlumni2 alm = new dataSeluruhAlumni2();
     /**
      * Creates new form pilihan
      */
@@ -31,60 +31,41 @@ public class pilihan extends javax.swing.JFrame {
         Lihat = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Lihat.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        Lihat.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         Lihat.setText("Lihat Data");
         Lihat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LihatActionPerformed(evt);
             }
         });
+        getContentPane().add(Lihat, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 154, 276, 90));
 
-        jButton2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton2.setText("Edit Data");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 255, 276, 90));
 
-        cancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cancel.setText("cancel");
+        cancel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cancel.setText("kembali");
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
             }
         });
+        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cancel)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(177, 177, 177)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Lihat, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(189, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(Lihat, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(cancel)
-                .addContainerGap())
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/82794.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,6 +82,7 @@ public class pilihan extends javax.swing.JFrame {
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
         dispose();
+        new menunya().show();
     }//GEN-LAST:event_cancelActionPerformed
 
     /**
@@ -142,5 +124,6 @@ public class pilihan extends javax.swing.JFrame {
     private javax.swing.JButton Lihat;
     private javax.swing.JButton cancel;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
