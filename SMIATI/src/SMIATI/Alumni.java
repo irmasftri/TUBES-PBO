@@ -7,14 +7,14 @@ package SMIATI;
 
 
 public class Alumni  {
-    String nim;
-    String nama;
-    String thn;
-    String kp;
-    double ipk;
-    String rkerja;
-    String ta;
-    String email;
+    public String nim;
+    public String nama;
+    public String thn;
+    public String kp;
+    public double ipk;
+    public String rkerja;
+    public String ta;
+    public String email;
     public Alumni(String nim,String nama, String thn, String kp, double ipk, String rkerja, String ta, String email ){
         this.nim=nim;
         this.nama=nama;
