@@ -3,21 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package home;
-
-import SMIATI.*;
-import Admin.*;
-
+package SMIATI;
+import home.*;
 /**
  *
- * @author idhammidori
+ * @author Windows 10
  */
-public class Dashboard extends javax.swing.JFrame {
+public class DataAlumni extends javax.swing.JFrame {
 
     /**
-     * Creates new form Dashboard
+     * Creates new form DataAlumni
      */
-    public Dashboard() {
+    public DataAlumni() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -33,77 +30,63 @@ public class Dashboard extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        kembali = new javax.swing.JButton();
+        textSrch = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 51, 102));
-        jButton1.setText("Login Alumni");
+        jButton1.setText("Tampilkan Data Alumni");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 280, 60));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 159, 308, 47));
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 255));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 51, 102));
-        jButton2.setText("Login Admin");
+        jButton2.setText("Cari Data");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 280, 60));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 104, 30));
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 51, 102));
-        jButton3.setText("Data Alumni");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        kembali.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        kembali.setForeground(new java.awt.Color(0, 51, 102));
+        kembali.setText("Kembali");
+        kembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                kembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 280, 60));
+        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 101, 31));
+        getContentPane().add(textSrch, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 224, 308, 29));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 34)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel1.setText("Sistem Manajemen Informasi");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 450, 50));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 34)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel2.setText("Alumni Teknik Informatika ITERA");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/itera_view_BvsL5x-nniu_1.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 520));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/82794.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
-        new LoginAlumni().show(); 
+        new dataSeluruhAlumni().show();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         dispose();
-        new LoginAdm().show();
-    }//GEN-LAST:event_jButton2ActionPerformed
+        new Dashboard().show();
+    }//GEN-LAST:event_kembaliActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        dispose();
-        new DataAlumni().show();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,20 +105,20 @@ public class Dashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Dashboard().setVisible(true);
+                new DataAlumni().setVisible(true);
             }
         });
     }
@@ -143,9 +126,8 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton kembali;
+    private javax.swing.JTextField textSrch;
     // End of variables declaration//GEN-END:variables
 }

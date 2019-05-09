@@ -17,29 +17,54 @@ import javax.swing.table.*;
  *
  * @author Windows 10
  */
-public class dataSeluruhAlumni extends javax.swing.JFrame {
+public class dataSeluruhAlumni2 extends javax.swing.JFrame {
     
-    public dataSeluruhAlumni() {
-        initComponents();
-        tampilan ();
-    }
+    private DefaultTableModel model;
+    String a,b,c, d, e, f, g, h;
     
-    public void tampilan (){
-        DefaultTableModel model = (DefaultTableModel) TABEL.getModel();
-        view alm = new view();
-        Object obj[] = new Object[8];
+    public void getData(){
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
         
-            for(int i =0;i<alm.data.size();i++){
-                obj[0]=alm.data.get(i).nama;
-                obj[1]=alm.data.get(i).nim;
-                obj[2]=alm.data.get(i).thn;
-                obj[3]=alm.data.get(i).kp;
-                obj[4]=alm.data.get(i).ipk;
-                obj[5]=alm.data.get(i).rkerja;
-                obj[6]=alm.data.get(i).ta;
-                obj[7]=alm.data.get(i).email;
+        try{
+            Statement stat = (Statement) koneksi.getKoneksi().createStatement();
+            String sql = "SELECT * FROM alumni";
+            ResultSet res = stat.executeQuery(sql);
+            
+            while(res.next()){
+                Object[] obj = new Object[8];
+                obj[0] = res.getString("NAMA");
+                obj[1] = res.getString("NIM");
+                obj[2] = res.getString("Tahun_Lulus");
+                obj[3] = res.getString("Tempat_KP");
+                obj[4] = res.getString("IPK");
+                obj[5] = res.getString("Riwayat_Kerja");
+                obj[6] = res.getString("Judul_TA");
+                obj[7] = res.getString("email");
+                
                 model.addRow(obj);
             }
+        }catch(SQLException err){
+            JOptionPane.showMessageDialog(null, err.getMessage());
+        }
+    }
+    
+    public dataSeluruhAlumni2() {
+        initComponents();
+        setLocationRelativeTo(null);
+        
+        model = new DefaultTableModel ();
+        tabel.setModel(model);
+        model.addColumn("Nama");
+        model.addColumn("Nim");
+        model.addColumn("Tahun Lulus");
+        model.addColumn("Tempat KP");
+        model.addColumn("IPK");
+        model.addColumn("Riwayar Kerja");
+        model.addColumn("Judul TA");
+        model.addColumn("email");
+        
+        getData();
     }
             
     /**
@@ -52,7 +77,7 @@ public class dataSeluruhAlumni extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane3 = new javax.swing.JScrollPane();
-        TABEL = new javax.swing.JTable();
+        tabel = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         KEMBALI = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -60,9 +85,9 @@ public class dataSeluruhAlumni extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TABEL.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        TABEL.setForeground(new java.awt.Color(0, 0, 102));
-        TABEL.setModel(new javax.swing.table.DefaultTableModel(
+        tabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tabel.setForeground(new java.awt.Color(0, 0, 102));
+        tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -70,7 +95,7 @@ public class dataSeluruhAlumni extends javax.swing.JFrame {
                 "Nama", "Nim", "Tahun Lulus", "Tempat KP", "IPK", "Riwayat Kerja", "Judul TA", "email"
             }
         ));
-        jScrollPane3.setViewportView(TABEL);
+        jScrollPane3.setViewportView(tabel);
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 1286, 232));
 
@@ -95,7 +120,7 @@ public class dataSeluruhAlumni extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KEMBALIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KEMBALIActionPerformed
-    new DataAlumni().show();
+    new pilihan().show();
     dispose();
     }//GEN-LAST:event_KEMBALIActionPerformed
 
@@ -118,29 +143,30 @@ public class dataSeluruhAlumni extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dataSeluruhAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dataSeluruhAlumni2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dataSeluruhAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dataSeluruhAlumni2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dataSeluruhAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dataSeluruhAlumni2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dataSeluruhAlumni.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dataSeluruhAlumni2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dataSeluruhAlumni().setVisible(true);
+                new dataSeluruhAlumni2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton KEMBALI;
-    private javax.swing.JTable TABEL;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable tabel;
     // End of variables declaration//GEN-END:variables
 }

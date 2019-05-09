@@ -116,7 +116,7 @@ public final class CreateAkun extends javax.swing.JFrame {
     
     public void delData(){
         loadData();
-        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus"+vUname+"?","Konfirmasi",
+        int pesan = JOptionPane.showConfirmDialog(null, "Anda yakin ingin menghapus "+vUname+"?","Konfirmasi",
                     JOptionPane.OK_CANCEL_OPTION);
         
         if(pesan==JOptionPane.OK_OPTION){
@@ -154,59 +154,91 @@ public final class CreateAkun extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelUname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelUname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelUname.setForeground(new java.awt.Color(0, 0, 102));
         jLabelUname.setText("Username");
+        getContentPane().add(jLabelUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, 30));
 
-        jLabelPass.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelPass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelPass.setForeground(new java.awt.Color(0, 0, 102));
         jLabelPass.setText("Password");
+        getContentPane().add(jLabelPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, -1, 30));
 
         uname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 unameActionPerformed(evt);
             }
         });
+        getContentPane().add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 240, 30));
 
+        pw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pwActionPerformed(evt);
+            }
+        });
+        getContentPane().add(pw, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, 240, 30));
+
+        btnSave.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnSave.setForeground(new java.awt.Color(0, 0, 102));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 80, -1));
 
+        btnReset.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(0, 0, 102));
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResetActionPerformed(evt);
             }
         });
+        getContentPane().add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 80, -1));
 
+        btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(0, 0, 102));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
+        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, -1, -1));
 
+        btnDel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnDel.setForeground(new java.awt.Color(0, 0, 102));
         btnDel.setText("Delete");
         btnDel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDelActionPerformed(evt);
             }
         });
+        getContentPane().add(btnDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 70, -1));
 
+        btnBack.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(0, 0, 102));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 460, 70, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 51, 102));
         jLabel1.setText("Create Account");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 280, 29));
 
+        table.setForeground(new java.awt.Color(0, 0, 102));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -225,68 +257,10 @@ public final class CreateAkun extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(table);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(87, 87, 87)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabelUname)
-                                            .addComponent(jLabelPass))
-                                        .addGap(32, 32, 32)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(uname)
-                                            .addComponent(pw)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnUpdate)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 23, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelUname)
-                    .addComponent(uname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPass)
-                    .addComponent(pw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnDel)
-                    .addComponent(btnReset))
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(btnBack)
-                .addContainerGap())
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 652, 200));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/82794.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -297,7 +271,6 @@ public final class CreateAkun extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         saveData();
-        reset();
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
@@ -320,6 +293,10 @@ public final class CreateAkun extends javax.swing.JFrame {
     private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
         delData();
     }//GEN-LAST:event_btnDelActionPerformed
+
+    private void pwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwActionPerformed
 
     /**
      * @param args the command line arguments
@@ -363,6 +340,7 @@ public final class CreateAkun extends javax.swing.JFrame {
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelPass;
     private javax.swing.JLabel jLabelUname;
     private javax.swing.JScrollPane jScrollPane1;

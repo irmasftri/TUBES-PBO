@@ -31,10 +31,13 @@ public class Admin extends javax.swing.JFrame {
         btnLoker = new javax.swing.JButton();
         btnBuatAkun = new javax.swing.JButton();
         KEMBALI = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 153, 153));
 
         btnLoker.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnLoker.setForeground(new java.awt.Color(0, 51, 102));
         btnLoker.setText("Tambah Lowongan Pekerjaan");
         btnLoker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,6 +46,7 @@ public class Admin extends javax.swing.JFrame {
         });
 
         btnBuatAkun.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnBuatAkun.setForeground(new java.awt.Color(0, 51, 102));
         btnBuatAkun.setText("Buat Akun");
         btnBuatAkun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,38 +54,52 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
-        KEMBALI.setText("KEMBALI");
+        KEMBALI.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        KEMBALI.setForeground(new java.awt.Color(0, 51, 102));
+        KEMBALI.setText("Logout");
         KEMBALI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 KEMBALIActionPerformed(evt);
             }
         });
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/82794.jpg"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
+                .addGap(196, 196, 196)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnBuatAkun, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLoker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(77, Short.MAX_VALUE))
+                    .addComponent(btnLoker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuatAkun, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(215, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(KEMBALI)
-                .addGap(20, 20, 20))
+                .addGap(23, 23, 23))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addContainerGap(182, Short.MAX_VALUE)
                 .addComponent(btnBuatAkun, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnLoker, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGap(168, 168, 168)
                 .addComponent(KEMBALI)
-                .addContainerGap())
+                .addGap(19, 19, 19))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -141,5 +159,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton KEMBALI;
     private javax.swing.JButton btnBuatAkun;
     private javax.swing.JButton btnLoker;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
