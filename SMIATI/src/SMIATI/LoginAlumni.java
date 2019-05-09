@@ -41,7 +41,6 @@ public class LoginAlumni extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        kembali = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -93,16 +92,6 @@ public class LoginAlumni extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(623, 166, 103, -1));
-
-        kembali.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        kembali.setForeground(new java.awt.Color(0, 0, 102));
-        kembali.setText("Kembali");
-        kembali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kembaliActionPerformed(evt);
-            }
-        });
-        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(623, 483, 103, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 102));
@@ -161,6 +150,7 @@ public class LoginAlumni extends javax.swing.JFrame {
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         dispose();
+        new Dashboard().show();
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void vusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vusernameActionPerformed
@@ -170,11 +160,6 @@ public class LoginAlumni extends javax.swing.JFrame {
     private void vpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vpasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_vpasswordActionPerformed
-
-    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
-        dispose();
-        new Dashboard().show();
-    }//GEN-LAST:event_kembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,7 +202,6 @@ public class LoginAlumni extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JButton kembali;
     private javax.swing.JPasswordField vpassword;
     private javax.swing.JTextField vusername;
     // End of variables declaration//GEN-END:variables
