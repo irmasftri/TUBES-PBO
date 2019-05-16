@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package SMIATI;
+import CariNama.TampilanData;
+import CariNama.namacari;
 import home.*;
 /**
  *
@@ -83,7 +85,7 @@ public class DataAlumni extends javax.swing.JFrame {
     }//GEN-LAST:event_kembaliActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new Cari().show();
+        new TampilanData().show();
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

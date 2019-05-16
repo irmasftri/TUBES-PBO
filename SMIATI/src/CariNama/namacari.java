@@ -27,7 +27,7 @@ public class namacari  {
     public namacari(){
        
         try(
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/smiati", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/smiati_final", "root", "");
             Statement stmt = conn.createStatement();
             ){  
                 ResultSet rset = stmt.executeQuery("select * from alumni");

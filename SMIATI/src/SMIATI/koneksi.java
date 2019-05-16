@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 public class koneksi {
     private static Connection conn;
     public static Connection getKoneksi(){
-        String host = "jdbc:mysql://localhost/smiati",
+        String host = "jdbc:mysql://localhost/smiati_final",
                user = "root",
                pass = "";
        try{

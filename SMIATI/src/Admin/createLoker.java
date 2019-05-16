@@ -112,7 +112,7 @@ public class createLoker extends javax.swing.JFrame {
             Statement stat = (Statement) koneksi.getKoneksi().createStatement();
             
             String sql = "UPDATE lowongan_kerja SET nama_perusahaan = '"+vNama+"',"+"jabatan = '"+vJabat+"',"
-                    +"email = '"+vEmail+"',"+"alamat = '"+vAlmt+"' WHERE email = '"+vEmail+"'";
+                    +"email = '"+vEmail+"',"+"alamat = '"+vAlmt+"' WHERE nama_perusahaan = '"+vNama+"'";
             PreparedStatement p = (PreparedStatement) koneksi.getKoneksi().prepareStatement(sql);
             p.executeUpdate();
             getData();
