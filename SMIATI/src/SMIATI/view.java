@@ -9,7 +9,7 @@ public class view {
     public view (){
         
      try(
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/smiati_update", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/smiati", "root", "");
             Statement stmt = conn.createStatement();
             ){  
                 ResultSet rset = stmt.executeQuery("select * from alumni");

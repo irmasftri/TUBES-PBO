@@ -5,7 +5,8 @@
  */
 package home;
 
-import SMIATI.*;
+import SMIATI.DataAlumni;
+import SMIATI.LoginAlumni;
 import Admin.*;
 
 /**

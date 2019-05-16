@@ -1,6 +1,6 @@
 package Admin;
 
-import SMIATI.*;
+import SMIATI.koneksi;
 import home.Dashboard;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -44,7 +44,6 @@ public class LoginAdm extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        KEMBALI = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/itera_view_BvsL5x-nniu_1.jpg"))); // NOI18N
@@ -103,16 +102,6 @@ public class LoginAdm extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Login");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 140, -1));
-
-        KEMBALI.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        KEMBALI.setForeground(new java.awt.Color(0, 0, 102));
-        KEMBALI.setText("Kembali");
-        KEMBALI.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KEMBALIActionPerformed(evt);
-            }
-        });
-        getContentPane().add(KEMBALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 486, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/itera_view_BvsL5x-nniu_1.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 540));
@@ -175,11 +164,6 @@ public class LoginAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_vpasswordActionPerformed
 
-    private void KEMBALIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KEMBALIActionPerformed
-        dispose();
-        new Dashboard().show();
-    }//GEN-LAST:event_KEMBALIActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -215,7 +199,6 @@ public class LoginAdm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton KEMBALI;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
