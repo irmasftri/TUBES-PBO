@@ -135,10 +135,10 @@ public class TampilanData extends javax.swing.JFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 218, 220, -1));
 
         nama.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 78, 1653, 14));
+        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 340, 14));
 
         nim.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(nim, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 98, 1653, 14));
+        getContentPane().add(nim, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 340, 14));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("Masukkan Nama Alumni");
@@ -152,25 +152,25 @@ public class TampilanData extends javax.swing.JFrame {
         getContentPane().add(tulis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 256, -1));
 
         thn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(thn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 118, 1653, 14));
+        getContentPane().add(thn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 340, 14));
 
         kp.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(kp, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 138, 1653, 14));
+        getContentPane().add(kp, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 340, 14));
 
         ipk.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(ipk, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 158, 1653, 14));
+        getContentPane().add(ipk, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 340, 14));
 
         rker.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         rker.setText(" ");
-        getContentPane().add(rker, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 178, 1653, -1));
+        getContentPane().add(rker, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 340, -1));
 
         ta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         ta.setText(" ");
-        getContentPane().add(ta, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 198, 1653, -1));
+        getContentPane().add(ta, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 340, -1));
 
         email.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         email.setText(" ");
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 218, 1653, -1));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 340, -1));
 
         jToggleButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jToggleButton1.setText("Kembali");
@@ -179,7 +179,7 @@ public class TampilanData extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 272, -1, -1));
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, -1, -1));
 
         search.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         search.setText("cari");
@@ -192,13 +192,14 @@ public class TampilanData extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/(2).jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 310));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
+        new DataAlumni().show();
         dispose();
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
