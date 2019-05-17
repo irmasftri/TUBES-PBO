@@ -69,7 +69,15 @@ public class dataSeluruhAlumni extends javax.swing.JFrame {
             new String [] {
                 "Nama", "Nim", "Tahun Lulus", "Tempat KP", "IPK", "Riwayat Kerja", "Judul TA", "email"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(TABEL);
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 1286, 232));

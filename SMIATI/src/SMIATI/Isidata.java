@@ -356,7 +356,7 @@ public class Isidata extends javax.swing.JFrame {
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         // TODO add your handling code here:
         Reset();
-        new pilihan().show();
+        new menunya().show();
         dispose();
     }//GEN-LAST:event_kembaliActionPerformed
 
