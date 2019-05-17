@@ -27,8 +27,8 @@ public class TampilanData extends javax.swing.JFrame {
      */
     public TampilanData() {
         initComponents();
-        
-        this.setLocation(0,0);
+        setLocationRelativeTo(null);
+        //this.setLocation(0,0);
     }
     
     public void getNama(){
@@ -134,11 +134,11 @@ public class TampilanData extends javax.swing.JFrame {
         jLabel8.setText("email                            ");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 160, -1));
 
-        nama.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 340, 14));
+        nama.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 104, 340, 20));
 
-        nim.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(nim, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 340, 14));
+        nim.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(nim, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 124, 340, 20));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("Masukkan Nama Alumni");
@@ -151,26 +151,26 @@ public class TampilanData extends javax.swing.JFrame {
         });
         getContentPane().add(tulis, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 40, 280, 30));
 
-        thn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(thn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 340, 14));
+        thn.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(thn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 144, 340, 20));
 
-        kp.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(kp, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 340, 14));
+        kp.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(kp, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 164, 340, 20));
 
-        ipk.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(ipk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 340, 14));
+        ipk.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(ipk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 184, 340, 20));
 
-        rker.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        rker.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rker.setText(" ");
-        getContentPane().add(rker, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 340, -1));
+        getContentPane().add(rker, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 204, 340, 20));
 
-        ta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ta.setText(" ");
-        getContentPane().add(ta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 340, -1));
+        getContentPane().add(ta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 224, 340, 20));
 
-        email.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        email.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         email.setText(" ");
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 340, -1));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 244, 340, 20));
 
         jToggleButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jToggleButton1.setText("Kembali");
