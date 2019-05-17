@@ -102,97 +102,97 @@ public class TampilanData extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Nama                           ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 78, 160, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 160, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Nim                              ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 98, 180, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 160, -1));
 
-        jlable.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jlable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jlable.setText("Tahun Lulus                ");
-        getContentPane().add(jlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 118, 210, -1));
+        getContentPane().add(jlable, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 160, -1));
 
-        jLaBle.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLaBle.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLaBle.setText("Tempat KP                  ");
-        getContentPane().add(jLaBle, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 138, 210, -1));
+        getContentPane().add(jLaBle, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 160, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("IPK                              ");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 158, 250, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 160, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Riwayat Kerja             ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 178, 220, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 160, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Judul TA                       ");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 198, 220, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 160, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("email                            ");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 218, 220, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 160, -1));
 
         nama.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 340, 14));
+        getContentPane().add(nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 340, 14));
 
         nim.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(nim, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 340, 14));
+        getContentPane().add(nim, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 340, 14));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("Masukkan Nama Alumni");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 15, 210, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 150, 30));
 
         tulis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tulisActionPerformed(evt);
             }
         });
-        getContentPane().add(tulis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 256, -1));
+        getContentPane().add(tulis, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 40, 280, 30));
 
         thn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(thn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 340, 14));
+        getContentPane().add(thn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 340, 14));
 
         kp.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(kp, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 340, 14));
+        getContentPane().add(kp, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 340, 14));
 
         ipk.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        getContentPane().add(ipk, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 340, 14));
+        getContentPane().add(ipk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 340, 14));
 
         rker.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         rker.setText(" ");
-        getContentPane().add(rker, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 340, -1));
+        getContentPane().add(rker, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 340, -1));
 
         ta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         ta.setText(" ");
-        getContentPane().add(ta, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 340, -1));
+        getContentPane().add(ta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 340, -1));
 
         email.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         email.setText(" ");
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 340, -1));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 340, -1));
 
-        jToggleButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jToggleButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jToggleButton1.setText("Kembali");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, -1, -1));
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 480, -1, -1));
 
-        search.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        search.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         search.setText("cari");
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchActionPerformed(evt);
             }
         });
-        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, -1));
+        getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 80, 30));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/(2).jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 430));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
